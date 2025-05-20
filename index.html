@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Click y listo</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Click y listo</h1>
+    <p class="subtitulo">¿Consumimos conocimiento o solo experiencias vacías?</p>
+    <button id="startBtn">Elegí tu experiencia</button>
+
+    <div id="gridCursos" class="grid hidden">
+      <!-- Se generan más cursos -->
+      <div class="card" data-desc="Aprendé desde cero sin horarios ni docentes.">JavaScript Express</div>
+      <div class="card" data-desc="Programación en 5 minutos, ideal para impacientes.">Python mientras dormís</div>
+      <div class="card" data-desc="Tu sitio web en una tarde sin ayuda humana.">HTML y CSS rápido</div>
+      <div class="card" data-desc="Diseñá como un profesional sin teoría.">UX en 1 hora</div>
+      <div class="card" data-desc="Curso automático, 100% grabado.">Bases de Datos para vagos</div>
+      <div class="card" data-desc="Inteligencia Artificial sin pensar demasiado.">IA en piloto automático</div>
+      <div class="card" data-desc="Cuestioná tu existencia en 20 minutos, sin leer filosofía.">Filosofía express para influencers</div>
+      <div class="card" data-desc="Convertite en líder espiritual sin salir de tu habitación.">Mindfulness turbo intensivo</div>
+      <div class="card" data-desc="Todo lo que necesitás para parecer un artista conceptual.">Arte moderno en 10 clics</div>
+      <div class="card" data-desc="Decí que sabés de política sin leer un diario.">Opinología con IA</div>
+      <div class="card" data-desc="Ser ciudadano digital sin salir de TikTok.">Ética en 30 segundos</div>
+      <div class="card" data-desc="Aprendé historia sin fechas ni contexto.">Historia emocional</div>
+    </div>
+
+    <div id="descripcionCurso" class="descripcion hidden"></div>
+
+    <div id="popup" class="popup hidden">
+      <p><strong>¿Sabías que estos modelos reemplazan docentes y precarizan el saber?</strong><br>
+      En la búsqueda constante de inmediatez, libertad individual, felicidad privada, corremos el riesgo de perder el sentido profundo del aprendizaje y caer en un consumo vacío, donde lo importante no es lo que se aprende, sino lo que se acumula.</p>
+      <button id="reflexBtn">Seguir consumiendo</button>
+    </div>
+
+    <div id="final" class="hidden">
+      <p>Elegí: ¿Comodidad o acompañamiento humano?</p>
+      <button class="choice" data-eleccion="comodidad">Comodidad</button>
+      <button class="choice" data-eleccion="acompanamiento">Acompañamiento</button>
+    </div>
+
+    <div id="cita" class="hidden">
+      <p id="textoReflexion"></p>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
