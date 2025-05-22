@@ -1,10 +1,14 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #111;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(20,20,20,0.9)), url('../assets/bg-netflix.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
+  min-height: 100vh;
 }
+
 
 .container {
   padding: 2rem;
@@ -45,24 +49,26 @@ button:hover {
 }
 
 .card {
-  background: #222;
-  width: 180px;
-  height: 100px;
+  background: #1c1c1c;
+  width: 200px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: bold;
-  transition: transform 0.3s, background 0.3s;
-  cursor: pointer;
-  border: 2px solid transparent;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background: #333;
-  border-color: #e50914;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  background: #2a2a2a;
 }
+
 
 .descripcion {
   margin-top: 1rem;
@@ -76,6 +82,22 @@ button:hover {
   color: #ddd;
 }
 
+.ver-mas-btn {
+  margin-top: 2rem;
+  background-color: #444;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ver-mas-btn:hover {
+  background-color: #666;
+}
+
 .popup {
   background: white;
   color: black;
@@ -85,8 +107,11 @@ button:hover {
   width: 80%;
   max-width: 500px;
   margin: 2rem auto;
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 #final, #cita {
@@ -111,4 +136,23 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+#volverBtn {
+  background-color: #555;
+  margin-top: 1.5rem;
+}
+
+#volverBtn:hover {
+  background-color: #777;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#gridCursos {
+  animation: fadeIn 0.8s ease-in-out;
 }
